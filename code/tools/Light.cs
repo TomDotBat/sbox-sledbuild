@@ -72,6 +72,8 @@
 					Color = Color.Random,
 				};
 
+				light.Owner = Owner;
+				((SledBuildPlayer)Owner).AddEntityToHistory(light);
 				light.UseFogNoShadows();
 				light.SetModel( Model );
 				light.SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );

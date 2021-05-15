@@ -76,6 +76,8 @@
 					WorldRot = Rotation.Identity
 				};
 
+				lamp.Owner = Owner;
+				((SledBuildPlayer)Owner).AddEntityToHistory(lamp);
 				lamp.SetModel( Model );
 				lamp.SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
 				lamp.WorldPos = tr.EndPos + -lamp.CollisionBounds.Center + tr.Normal * lamp.CollisionBounds.Size * 0.5f;

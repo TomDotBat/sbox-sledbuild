@@ -69,6 +69,8 @@
 					WorldRot = Rotation.LookAt( tr.Normal ) * Rotation.From( new Angles( 0, 90, 0 ) ),
 				};
 
+				ent.Owner = Owner;
+				((SledBuildPlayer)Owner).AddEntityToHistory(ent);
 				ent.SetModel( "models/citizen_props/wheel01.vmdl" );
 
 				ent.PhysicsBody.Mass = tr.Body.Mass;
