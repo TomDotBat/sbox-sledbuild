@@ -30,6 +30,7 @@ public partial class ChairEntity : Prop, IUse
 
 	public void Enter(SledBuildPlayer player)
 	{
+		player.IsInChair = true;
 		player.VehicleController = new ChairPlayerController(this);
 		player.EnableAllCollisions = false;
 		Sitter = player;
@@ -38,7 +39,8 @@ public partial class ChairEntity : Prop, IUse
 	public void Exit()
 	{
 		if (Sitter == null) return;
-		
+
+		Sitter.IsInChair = true;
 		Sitter.VehicleController = null;
 		Sitter.EnableAllCollisions = true;
 		Sitter.WorldPos = WorldPos + Vector3.Up * 20 + Vector3.Right * 200;

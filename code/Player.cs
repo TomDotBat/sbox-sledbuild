@@ -17,6 +17,7 @@ public partial class SledBuildPlayer : BasePlayer
 	[Net]
 	public PlayerAnimator VehicleAnimator { get; set; }
 
+	public bool IsInChair { get; set; }
 	public Stack<Entity> SpawnHistory { get; set; }
 	
 	public SledBuildPlayer()
