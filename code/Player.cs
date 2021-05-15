@@ -39,7 +39,6 @@ partial class SledBuildPlayer : BasePlayer
 		Inventory.Add( new PhysGun(), true );
 		Inventory.Add( new GravGun() );
 		Inventory.Add( new Tool() );
-		Inventory.Add( new Gun() );
 
 		base.Respawn();
 	}
