@@ -15,7 +15,7 @@ partial class SledBuildPlayer : BasePlayer
 
 	[Net]
 	public PlayerAnimator VehicleAnimator { get; set; }
-
+	
 	public SledBuildPlayer()
 	{
 		Inventory = new Inventory( this );
