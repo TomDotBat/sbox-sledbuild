@@ -14,7 +14,7 @@ partial class SledBuildGame : Game
 		if ( IsServer )
 		{
 			// Create the HUD
-			new SandboxHud();
+			new SledBuildHud();
 		}
 	}
 

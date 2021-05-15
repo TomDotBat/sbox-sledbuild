@@ -2,14 +2,14 @@
 using Sandbox.UI;
 
 [Library]
-public partial class SandboxHud : Hud
+public partial class SledBuildHud : Hud
 {
-	public SandboxHud()
+	public SledBuildHud()
 	{
 		if ( !IsClient )
 			return;
 
-		RootPanel.StyleSheet.Load( "/ui/SandboxHud.scss" );
+		RootPanel.StyleSheet.Load( "/ui/Hud.scss" );
 
 		RootPanel.AddChild<NameTags>();
 		RootPanel.AddChild<CrosshairCanvas>();
