@@ -50,6 +50,11 @@
 				if ( !tr.Hit || !tr.Entity.IsValid() )
 					return;
 
+				if ( tr.Entity.IsValid() )
+				{
+					if (Owner != tr.Entity.Owner) return;
+				}
+				
 				CreateHitEffects( tr.EndPos );
 
 				if ( tr.Entity.IsWorld )
