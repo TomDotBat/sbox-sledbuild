@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Sandbox;
 
-partial class SledBuildPlayer : BasePlayer
+public partial class SledBuildPlayer : BasePlayer
 {
 	private TimeSince timeSinceDropped;
 	private TimeSince timeSinceJumpReleased;
@@ -79,8 +79,8 @@ partial class SledBuildPlayer : BasePlayer
 
 	public override PlayerController GetActiveController()
 	{
-		if ( DevController != null ) return DevController;
 		if ( VehicleController != null ) return VehicleController;
+		if ( DevController != null ) return DevController;
 
 		return base.GetActiveController();
 	}

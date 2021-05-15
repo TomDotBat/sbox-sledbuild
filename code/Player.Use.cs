@@ -1,6 +1,6 @@
 ﻿using Sandbox;
 
-partial class SledBuildPlayer
+public partial class SledBuildPlayer
 {
 	protected bool IsUseDisabled()
 	{

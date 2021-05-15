@@ -3,7 +3,7 @@ using System;
 using Sandbox;
 using Sandbox.UI;
 
-partial class SledBuildPlayer
+public partial class SledBuildPlayer
 {
 	private static readonly SoundEvent UndoSound = new( "sounds/balloon_pop_cute.vsnd" )
 	{
