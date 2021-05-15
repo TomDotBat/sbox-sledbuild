@@ -56,7 +56,6 @@ partial class Flashlight : Weapon
 		};
 
 		light.Owner = Owner;
-		((SledBuildPlayer)Owner).AddEntityToHistory(light);
 		light.UseFog();
 
 		return light;
