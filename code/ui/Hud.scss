@@ -122,6 +122,7 @@ InventoryIcon {
 }
 
 OwnershipIndicator {
+    position: absolute;
     background-color: #000000;
     opacity: 0.7;
     border-radius: 3px;
@@ -133,6 +134,18 @@ OwnershipIndicator {
     padding: 2px 3px 2px 3px;
     left: 2px;
     top: 500px;
+}
+
+SpeedIndicator {
+    position: absolute;
+    color: #ffffff;
+    font-family: "Poppins";
+    font-size: 34px;
+    font-weight: 600;
+    text-align: right;
+    height: 21px;
+    left: 1780px;
+    top: 990px;
 }
 
 .owned {

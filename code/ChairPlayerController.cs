@@ -18,7 +18,8 @@ public partial class ChairPlayerController : BasePlayerController
 		if ( !_chair.IsValid() ) ((SledBuildPlayer)Player).VehicleController = null;
 		
 		Pos = _chair.Transform.PointToWorld( _chair.GetAttachment( "Sit" ).Pos );
-	
+		Velocity = _chair.Velocity;
+		
 		if (Host.IsClient) return;
 	
 		if (!Input.Pressed(InputButton.Use)) return;

@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Sandbox;
 using Sandbox.UI;
 using Sandbox.UI.Construct;
@@ -7,7 +8,7 @@ public class SpeedIndicator : Panel
 {
 	public SpeedIndicator()
 	{
-		_label = Add.Label( "Tom.bat", "entity-owner" );
+		_label = Add.Label( "420MPH" );
 	}
 
 	public override void Tick()
@@ -17,23 +18,14 @@ public class SpeedIndicator : Panel
 		_label.Text = "";
 		SetClass( "disabled", true );
 	
-		Player player = Player.Local;
-		if ( !player.IsValid() ) return;
-	
-		TraceResult traceResult = Trace.Ray( player.EyePos, player.EyePos + ( player.EyeRot.Forward * 10000 ) )
-			.Ignore( player )
-			.Size( 1 )
-			.Run();
-
-		Entity entity = traceResult.Entity;
-		if ( entity == null ) return;
-
-		Player entityOwner = traceResult.Entity.Owner;
-		if ( entityOwner == null ) return;
-	
+		Player localPlayer = Player.Local;
+		if ( !localPlayer.IsValid() ) return;
+		if ( localPlayer is not SledBuildPlayer player ) return;
+		
+		if ( player.Chair == null ) return;
+		
 		SetClass( "disabled", false );
-		SetClass( "owned", entityOwner == Player.Local );
-		_label.Text = entityOwner.Name;
+		_label.Text = Math.Round((player.Velocity.Length * 2f) / 160) + " MPH";
 	}
 
 	private Label _label;

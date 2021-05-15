@@ -19,6 +19,7 @@ public partial class SledBuildHud : Hud
 		RootPanel.AddChild<Scoreboard<ScoreboardEntry>>();
 		RootPanel.AddChild<InventoryBar>();
 		RootPanel.AddChild<OwnershipIndicator>();
+		RootPanel.AddChild<SpeedIndicator>();
 		RootPanel.AddChild<CurrentTool>();
 		RootPanel.AddChild<SpawnMenu>();
 	}
