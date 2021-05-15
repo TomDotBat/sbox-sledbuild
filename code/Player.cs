@@ -1,6 +1,6 @@
 ﻿using Sandbox;
 
-partial class SandboxPlayer : BasePlayer
+partial class SledBuildPlayer : BasePlayer
 {
 	private TimeSince timeSinceDropped;
 	private TimeSince timeSinceJumpReleased;
@@ -16,7 +16,7 @@ partial class SandboxPlayer : BasePlayer
 	[Net]
 	public PlayerAnimator VehicleAnimator { get; set; }
 
-	public SandboxPlayer()
+	public SledBuildPlayer()
 	{
 		Inventory = new Inventory( this );
 	}

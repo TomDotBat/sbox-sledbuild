@@ -6,10 +6,10 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-[Library( "sandbox", Title = "Sandbox" )]
-partial class SandboxGame : Game
+[Library( "sledbuild", Title = "SledBuild" )]
+partial class SledBuildGame : Game
 {
-	public SandboxGame()
+	public SledBuildGame()
 	{
 		if ( IsServer )
 		{
@@ -20,7 +20,7 @@ partial class SandboxGame : Game
 
 	public override Player CreatePlayer()
 	{
-		return new SandboxPlayer();
+		return new SledBuildPlayer();
 	}
 
 	protected override void OnDestroy()

@@ -1,6 +1,6 @@
 ﻿using Sandbox;
 
-partial class SandboxPlayer
+partial class SledBuildPlayer
 {
 	ModelEntity pants;
 	ModelEntity jacket;
