@@ -58,5 +58,4 @@ public partial class ChairEntity : Prop, IUse
 		Exit();
 		base.OnDestroy();
 	}
-
 }
