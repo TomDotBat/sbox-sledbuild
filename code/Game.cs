@@ -23,11 +23,6 @@ partial class SledBuildGame : Game
 		return new SledBuildPlayer();
 	}
 
-	protected override void OnDestroy()
-	{
-		base.OnDestroy();
-	}
-
 	[ServerCmd( "spawn" )]
 	public static void Spawn( string modelname )
 	{
