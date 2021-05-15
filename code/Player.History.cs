@@ -26,7 +26,7 @@ public partial class SledBuildPlayer
 		player.PlaySound( UndoSound.Name );
 		
 		Entity ent = player.SpawnHistory.Pop();
-		ChatBox.AddInformation( player, "Undone prop", "avatar:" + player.SteamId );
+		ChatBox.AddInformation( player, "Undone entity", "avatar:" + player.SteamId );
 		ent.Delete();
 	}
 }
