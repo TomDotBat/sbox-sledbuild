@@ -42,6 +42,7 @@ partial class SledBuildGame : Game
 		ent.WorldRot = Rotation.From( new Angles( 0, owner.EyeAng.yaw, 0 ) ) * Rotation.FromAxis( Vector3.Up, 180 );
 		ent.SetModel( modelname );
 		ent.Owner = owner;
+		((SledBuildPlayer)owner).AddEntityToHistory( ent );
 
 		// Drop to floor
 		if ( ent.PhysicsBody != null && ent.PhysicsGroup.BodyCount == 1 )
@@ -84,6 +85,7 @@ partial class SledBuildGame : Game
 		ent.WorldPos = tr.EndPos;
 		ent.WorldRot = Rotation.From( new Angles( 0, owner.EyeAng.yaw, 0 ) );
 		ent.Owner = owner;
+		((SledBuildPlayer)owner).AddEntityToHistory( ent );
 
 		//Log.Info( $"ent: {ent}" );
 	}

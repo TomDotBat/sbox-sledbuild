@@ -1,4 +1,5 @@
-﻿using Sandbox;
+﻿using System.Collections.Generic;
+using Sandbox;
 
 partial class SledBuildPlayer : BasePlayer
 {
@@ -15,10 +16,13 @@ partial class SledBuildPlayer : BasePlayer
 
 	[Net]
 	public PlayerAnimator VehicleAnimator { get; set; }
+
+	public Stack<Entity> SpawnHistory { get; set; }
 	
 	public SledBuildPlayer()
 	{
 		Inventory = new Inventory( this );
+		if ( IsServer ) SpawnHistory = new Stack<Entity>();
 	}
 
 	public override void Respawn()
