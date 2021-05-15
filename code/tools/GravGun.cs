@@ -111,6 +111,8 @@ public partial class GravGun : Carriable, IPlayerControllable
 			var modelEnt = tr.Entity as ModelEntity;
 			if ( !modelEnt.IsValid() )
 				return;
+			
+			if (owner != modelEnt.Owner) return;
 
 			var body = tr.Body;
 
