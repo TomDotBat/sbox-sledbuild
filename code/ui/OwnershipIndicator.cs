@@ -4,18 +4,16 @@ using Sandbox.UI.Construct;
 
 public class OwnershipIndicator : Panel
 {
-	public Label Label { get; set; }
-
 	public OwnershipIndicator()
 	{
-		Label = Add.Label( "Tom.bat", "entity-owner" );
+		_label = Add.Label( "Tom.bat", "entity-owner" );
 	}
 	
 	public override void Tick()
 	{
 		base.Tick();
 
-		Label.Text = "";
+		_label.Text = "";
 		SetClass( "disabled", true );
 		
 		Player player = Player.Local;
@@ -34,6 +32,8 @@ public class OwnershipIndicator : Panel
 		
 		SetClass( "disabled", false );
 		SetClass( "owned", entityOwner == Player.Local );
-		Label.Text = entityOwner.Name;
+		_label.Text = entityOwner.Name;
 	}
+	
+	private Label _label;
 }
