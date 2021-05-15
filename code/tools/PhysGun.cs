@@ -121,6 +121,8 @@ public partial class PhysGun : Carriable, IPlayerControllable, IPlayerInput
 		if ( !tr.Hit || !tr.Body.IsValid() || tr.Entity.IsWorld ) return;
 
 		var rootEnt = tr.Entity.Root;
+		if (owner != rootEnt.Owner) return;
+		
 		var body = tr.Body;
 
 		if ( tr.Entity.Parent.IsValid() )
