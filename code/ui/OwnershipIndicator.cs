@@ -6,7 +6,7 @@ public class OwnershipIndicator : Panel
 {
 	public OwnershipIndicator()
 	{
-		_label = Add.Label( "Tom.bat", "entity-owner" );
+		_label = Add.Label( "Tom.bat" );
 	}
 	
 	public override void Tick()
